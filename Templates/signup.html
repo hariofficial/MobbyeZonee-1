@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<section>
+    <span>
+        <form action="signup" method="POST" class="sign_up_form">
+            {% csrf_token %}
+            <input type="text" class="sign_up_data" id="name" placeholder="Full Name" title="Eg : Narendra Prasad">
+            <input type="tel" class="sign_up_data" id="number" placeholder="Phone Number" title="Eg : 0123456789">
+            <input type="email" class="sign_up_data" id="mailid" placeholder="Mail ID" title="Eg : example@mail.com">
+            <input type="password" class="sign_up_data" id="password" placeholder="Password">
+            <input type="submit" class="sign_up_data" value="Sign Up">
+        </form>
+        <p class="login_link">Existing User! <a href="login">Sign In >></a></p>
+    </span>
+</section>
+{% endblock content %}

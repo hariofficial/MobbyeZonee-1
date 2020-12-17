@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<section>
+    <span>
+        <form action="login" method="POST" class="login_form">
+            {% csrf_token %}
+            <input class="login_data" type="tel" id="number" placeholder="Phone Number">
+            <input class="login_data" type="password" id="password" placeholder="Password">
+            <input class="login_data" type="submit" value="Sign In">
+        </form>
+    </span>
+</section>
+{% endblock content %}
